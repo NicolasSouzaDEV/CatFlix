@@ -1,0 +1,26 @@
+<mat-spinner *ngIf="catList == undefined"></mat-spinner>
+<div *ngIf="catList != undefined" id="catbox">
+  <mat-card *ngFor="let cat of catList" class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ cat.breeds[0].name }}</mat-card-title>
+      <mat-card-subtitle>{{ cat.breeds[0].origin }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="cat.url" alt="Photo of a Cat" />
+    <mat-card-content>
+      <p>
+        {{ cat.breeds[0].description | catDesc }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-button
+        matTooltip="Mais informações sobre essa fofura :)"
+        aria-label="Button that displays a tooltip when focused or hovered over"
+        routerLink="/details/{{cat.id}}"
+      >
+        Ver mais
+      </button>
+      <mat-icon #favicon (click)="favCat(cat.id)" onclick="()=>favicon.style.color='red'">favorite</mat-icon>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,35 @@
+<mat-spinner *ngIf="idCatDetails == undefined"></mat-spinner>
+<div *ngIf="idCatDetails != undefined" id="container">
+    <mat-card>
+        <img [src]="idCatDetails.url">
+    </mat-card>
+    <mat-card>
+        <h1>{{idCatDetails.breeds[0].name}}</h1>
+        <h5>{{idCatDetails.breeds[0].alt_names}}</h5>
+        <h2>Origem</h2>
+        <p>{{idCatDetails.breeds[0].origin}}</p>
+        <h2>Detalhes</h2>
+        <p>{{idCatDetails.breeds[0].description}}</p>
+        <h2>Temperamento</h2>
+        <p>{{idCatDetails.breeds[0].temperament}}</p>
+        <h2>Expectativa de vida</h2>
+        <p>{{idCatDetails.breeds[0].life_span}} anos</p>
+        <h2>Outras informações</h2>
+        <p><span>Adaptabilidade:</span> {{idCatDetails.breeds[0].adaptability}}<mat-progress-bar mode="determinate" [value]="(idCatDetails.breeds[0].adaptability * 20)"></mat-progress-bar></p>
+        
+
+        <p><span>Nivel de afeição:</span> {{idCatDetails.breeds[0].affection_level}}<mat-progress-bar mode="determinate" [value]="(idCatDetails.breeds[0].affection_level * 20)"></mat-progress-bar></p>
+        
+
+        <p><span>Afeição com crianças:</span> {{idCatDetails.breeds[0].child_friendly}}<mat-progress-bar mode="determinate" [value]="(idCatDetails.breeds[0].child_friendly * 20)"></mat-progress-bar></p>
+        
+
+        <p><span>Energia:</span> {{idCatDetails.breeds[0].energy_level}}<mat-progress-bar mode="determinate" [value]="(idCatDetails.breeds[0].energy_level * 20)"></mat-progress-bar></p>
+        
+
+        <p><span>Problemas de saúde:</span> {{idCatDetails.breeds[0].health_issues}}<mat-progress-bar mode="determinate" [value]="(idCatDetails.breeds[0].health_issues * 20)"></mat-progress-bar></p>
+        
+
+        <p><span>Inteligência:</span> {{idCatDetails.breeds[0].intelligence}}<mat-progress-bar mode="determinate" [value]="(idCatDetails.breeds[0].intelligence * 20)"></mat-progress-bar></p>
+    </mat-card>
+</div>

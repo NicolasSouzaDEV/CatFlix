@@ -1,0 +1,52 @@
+<h1>Cadastre-se</h1>
+
+<form class="container" [formGroup]="this.formulary" (ngSubmit)="setUsername(this.formulary.get('name').value)" >
+    <div class="mb-3">
+        <label for="exampleInputName1" class="form-label">Nome:</label>
+        <input
+          type="name"
+          formControlName="name"
+          class="form-control"
+          id="exampleInputName1"
+          aria-describedby="nameHelp"
+          placeholder="Digite seu nome"
+        />
+        <div *ngIf="this.formulary.get('name').errors ? this.formulary.get('name').errors['required'] && this.formulary.get('name').touched : false" class="alert alert-danger" role="alert">
+          Preencha o campo acima
+        </div>
+      </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email:</label>
+    <input
+      type="email"
+      formControlName="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Digite seu e-mail"
+      
+    />
+    <div *ngIf="this.formulary.get('email').errors ? this.formulary.get('email').errors['required'] && this.formulary.get('email').touched : false" class="alert alert-danger" role="alert">
+      Preencha o campo acima
+    </div>
+    <div *ngIf="this.formulary.get('email').errors ? this.formulary.get('email').errors['email'] && this.formulary.get('email').touched : false" class="alert alert-danger" role="alert">
+      Campo inválido
+    </div>
+</div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Senha:</label>
+    <input 
+    formControlName="password" 
+    type="password" 
+    class="form-control" 
+    id="exampleInputPassword1" 
+    placeholder="Digite uma senha"
+    
+    />
+    <div *ngIf="this.formulary.get('password').errors ? this.formulary.get('password').errors['required'] && this.formulary.get('password').touched : false" class="alert alert-danger" role="alert">
+      Preencha o campo acima
+    </div>
+  </div>
+  <button routerLink="/cats" type="submit" class="btn btn-primary">Cadastrar</button>
+</form>
