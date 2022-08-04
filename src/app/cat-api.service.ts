@@ -11,12 +11,12 @@ export class CatApiService {
     'content-type': 'application/json',
   });
 
-  user: string = 'catLover';
+  user: string = "catLover";
 
   constructor(private client: HttpClient) {}
   getCats(): Observable<{}[]> {
     return this.client.get<{}[]>(
-      `https://api.thecatapi.com/v1/images/search?limit=10&has_breeds=1`,
+      `https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=1`,
       { headers: this.header }
     );
   }
@@ -48,6 +48,6 @@ export class CatApiService {
   }
 
   setUsername(username: string) {
-    this.user = username
+    this.user = username;
   }
 }

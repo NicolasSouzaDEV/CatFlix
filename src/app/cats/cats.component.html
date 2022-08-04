@@ -20,7 +20,7 @@
       >
         Ver mais
       </button>
-      <mat-icon #favicon (click)="favCat(cat.id)" onclick="()=>favicon.style.color='red'">favorite</mat-icon>
+      <mat-icon #favicon (click)="favicon.color = 'warn'" (click)="favCat(cat.id)">favorite</mat-icon>
     </mat-card-actions>
   </mat-card>
 </div>

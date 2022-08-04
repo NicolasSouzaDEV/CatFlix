@@ -17,7 +17,7 @@ export class CatsComponent implements OnInit {
   }
 
   favCat(id: string){
-    this.api.favCat(id).subscribe((a) => console.log(a))
+    this.api.favCat(id).subscribe(postreturn => console.log(postreturn))
   }
 
   ngOnInit(): void {

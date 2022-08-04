@@ -4,12 +4,12 @@
         <img [src]="idCatDetails.url">
     </mat-card>
     <mat-card>
-        <h1>{{idCatDetails.breeds[0].name}}</h1>
+        <h1>{{idCatDetails.breeds[0].name}}<mat-icon #favicon (click)="favicon.color = 'warn'" (click)="favCat(idCatDetails.id)">favorite</mat-icon></h1>
         <h5>{{idCatDetails.breeds[0].alt_names}}</h5>
         <h2>Origem</h2>
         <p>{{idCatDetails.breeds[0].origin}}</p>
         <h2>Detalhes</h2>
-        <p>{{idCatDetails.breeds[0].description}}</p>
+        <p>{{idCatDetails.breeds[0].description}} <a [href] = "idCatDetails.breeds[0].wikipedia_url">Saiba mais</a></p>
         <h2>Temperamento</h2>
         <p>{{idCatDetails.breeds[0].temperament}}</p>
         <h2>Expectativa de vida</h2>

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CatApiService } from '../cat-api.service';
@@ -11,10 +12,11 @@ export class LoginComponent implements OnInit {
 
   formulary: FormGroup
 
-  constructor(private api: CatApiService, private formBuilder: FormBuilder) { }
+  constructor(private api: CatApiService, private formBuilder: FormBuilder, private router: Router) { }
   
   setUsername(username: string){
     this.api.setUsername(username)
+    this.router.navigate(['/cats'])
   }
 
   ngOnInit(): void {

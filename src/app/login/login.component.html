@@ -48,5 +48,5 @@
       Preencha o campo acima
     </div>
   </div>
-  <button routerLink="/cats" type="submit" class="btn btn-primary">Cadastrar</button>
+  <button type="submit" [disabled] = "!this.formulary.valid" class="btn btn-primary">Entrar</button>
 </form>
