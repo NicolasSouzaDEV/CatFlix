@@ -9,13 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'Catflix';
 
-  constructor(private api: CatApiService) {}
+  constructor(private api: CatApiService) {
+  }
+
+  leaveUsername(){
+    this.api.leaveUsername()
+  }
+
+  checkUserLogin(){
+    return this.api.checkUserLogin()
+    
+  }
+
+  getUsername(){
+    return this.api.user
+  }
 
   ngOnInit() {
-    let getSave = localStorage.getItem('user');
-    if (getSave == null) {
-      this.api.user = getSave;
-    }
-    console.log(`usuário ${this.api.user} carregado`);
+    
   }
 }

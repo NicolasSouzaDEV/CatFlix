@@ -10,7 +10,7 @@ import { CatApiService } from '../cat-api.service';
 export class DetailsComponent implements OnInit {
   idCatDetails: any
 
-  constructor(private api: CatApiService, private route: ActivatedRoute) { }
+  constructor(private api: CatApiService, private route: ActivatedRoute, private router: Router) { }
 
   favCat(id: string){
     this.api.favCat(id).subscribe(postreturn => console.log(postreturn))

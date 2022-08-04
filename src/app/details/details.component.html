@@ -1,7 +1,7 @@
 <mat-spinner *ngIf="idCatDetails == undefined"></mat-spinner>
 <div *ngIf="idCatDetails != undefined" id="container">
     <mat-card>
-        <img [src]="idCatDetails.url">
+        <img [src]="idCatDetails.url" target="blank">
     </mat-card>
     <mat-card>
         <h1>{{idCatDetails.breeds[0].name}}<mat-icon #favicon (click)="favicon.color = 'warn'" (click)="favCat(idCatDetails.id)">favorite</mat-icon></h1>

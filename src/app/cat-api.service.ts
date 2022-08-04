@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -11,9 +12,9 @@ export class CatApiService {
     'content-type': 'application/json',
   });
 
-  user: string;
+  user: string = localStorage.getItem('user');
 
-  constructor(private client: HttpClient) {}
+  constructor(private client: HttpClient, private router: Router) {}
   getCats(): Observable<{}[]> {
     return this.client.get<{}[]>(
       `https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=1`,
@@ -51,5 +52,15 @@ export class CatApiService {
     this.user = username;
     localStorage.setItem('user', username);
     console.log(`usuário ${username} salvo`)
+  }
+
+  leaveUsername(){
+    this.user = null;
+    localStorage.setItem('user', null);
+    this.router.navigate(['/login'])
+  }
+
+  checkUserLogin(){
+    return this.user !== null
   }
 }
