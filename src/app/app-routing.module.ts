@@ -1,4 +1,4 @@
-import { LoginGuard } from './guard/login.guard.service';
+import { LoginGuard } from './guard/login.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CatsComponent } from './cats/cats.component';

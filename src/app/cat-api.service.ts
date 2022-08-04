@@ -11,7 +11,7 @@ export class CatApiService {
     'content-type': 'application/json',
   });
 
-  user: string = "catLover";
+  user: string;
 
   constructor(private client: HttpClient) {}
   getCats(): Observable<{}[]> {
@@ -49,5 +49,7 @@ export class CatApiService {
 
   setUsername(username: string) {
     this.user = username;
+    localStorage.setItem('user', username);
+    console.log(`usuário ${username} salvo`)
   }
 }
