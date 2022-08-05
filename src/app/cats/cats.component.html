@@ -1,5 +1,6 @@
 <mat-spinner *ngIf="catList == undefined"></mat-spinner>
 <div *ngIf="catList != undefined" id="catbox">
+  
   <mat-card *ngFor="let cat of catList" class="example-card">
     <mat-card-header>
       <mat-card-title>{{ cat.breeds[0].name }}</mat-card-title>

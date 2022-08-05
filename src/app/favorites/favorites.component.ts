@@ -1,3 +1,4 @@
+import { cat, favoriteCat } from './../interface/cat';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs';
 import { CatApiService } from '../cat-api.service';
@@ -9,7 +10,7 @@ import { CatApiService } from '../cat-api.service';
 })
 export class FavoritesComponent implements OnInit {
 
-  favCats: any;
+  favCats: favoriteCat[];
 
   constructor(private api: CatApiService) {}
 

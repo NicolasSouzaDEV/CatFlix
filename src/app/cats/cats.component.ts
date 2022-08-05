@@ -1,3 +1,4 @@
+import { cat } from './../interface/cat';
 import { Component, OnInit } from '@angular/core';
 import { CatApiService } from '../cat-api.service';
 
@@ -8,7 +9,7 @@ import { CatApiService } from '../cat-api.service';
 })
 export class CatsComponent implements OnInit {
 
-  catList:any;
+  catList: cat[];
 
   constructor(private api: CatApiService) { }
 
