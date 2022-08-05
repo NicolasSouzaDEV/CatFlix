@@ -16,11 +16,17 @@
         mat-button
         matTooltip="Mais informações sobre essa fofura :)"
         aria-label="Button that displays a tooltip when focused or hovered over"
-        routerLink="/details/{{cat.id}}"
+        routerLink="/details/{{ cat.id }}"
       >
         Ver mais
       </button>
-      <mat-icon #favicon (click)="favicon.color = 'warn'" (click)="favCat(cat.id)">favorite</mat-icon>
+      <mat-icon
+        matTooltip="Favoritar este este gato"
+        #favicon
+        (click)="favicon.color = 'warn'"
+        (click)="favCat(cat.id)"
+        >favorite</mat-icon
+      >
     </mat-card-actions>
   </mat-card>
 </div>

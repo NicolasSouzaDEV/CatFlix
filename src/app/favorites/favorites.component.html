@@ -1,12 +1,21 @@
 <mat-spinner *ngIf="favCats == undefined"></mat-spinner>
 <div id="noFavsFound" *ngIf="favCats.length == 0">
-    <p>Nenhum gato favorito :/</p>
-    <p>Clique no ícone de coração para favoritar</p>
+  <p>Nenhum gato favorito :/</p>
+  <p>Clique no ícone de coração para favoritar</p>
 </div>
 <div *ngIf="favCats != undefined" id="catbox">
-    <div class="catFav" *ngFor="let cat of favCats">
-        <div id="image"><img [src]="cat.image.url" routerLink="/details/{{cat.image_id}}">
-            <div id="delete" (click)="delFavCat(cat.id)"><mat-icon>close</mat-icon></div></div>
-    </div>
-</div>
+  <div class="catFav" *ngFor="let cat of favCats">
 
+    <div id="catwrap">
+        <div
+          id="image"
+          routerLink="/details/{{ cat.image_id }}"
+          style="background-image: url({{cat.image.url}})"
+        >
+        </div>
+        <div id="delete" (click)="delFavCat(cat.id)">
+            <mat-icon>close</mat-icon>
+          </div>
+    </div>
+  </div>
+</div>
