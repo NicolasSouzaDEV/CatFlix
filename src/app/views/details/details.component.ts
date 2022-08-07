@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/app/views/details/details.component.ts
 import { cat } from '../../interface/cat';
+=======
+import { cat } from './../interface/cat';
+>>>>>>> 980f584d1d78ac5a27362cf7d9b382f34ba83024:src/app/details/details.component.ts
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CatApiService } from '../../service/cat-api.service';
