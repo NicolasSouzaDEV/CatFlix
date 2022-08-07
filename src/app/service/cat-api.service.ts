@@ -1,8 +1,5 @@
-<<<<<<< HEAD:src/app/service/cat-api.service.ts
+
 import { cat, favoriteCat } from '../interface/cat';
-=======
-import { cat, favoriteCat } from './interface/cat';
->>>>>>> 980f584d1d78ac5a27362cf7d9b382f34ba83024:src/app/cat-api.service.ts
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
