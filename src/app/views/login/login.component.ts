@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CatApiService } from '../cat-api.service';
+import { CatApiService } from '../../service/cat-api.service';
 
 @Component({
   selector: 'app-login',

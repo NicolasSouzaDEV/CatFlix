@@ -1,4 +1,4 @@
-import { CatApiService } from './cat-api.service';
+import { CatApiService } from './service/cat-api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

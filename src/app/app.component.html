@@ -1,7 +1,7 @@
 <span>
   <mat-toolbar>
-    <img id="logo" src="../assets/logo.png">
-    <span *ngIf="this.checkUserLogin()" id="userbar" (click)="this.leaveUsername()"><span>{{getUsername()}} <img id="userphoto" src="../assets/user.png"> </span> Sair --></span>
+    <img id="logo" src="../assets/logo.png" routerLink="/cats">
+    <span *ngIf="this.checkUserLogin()" id="userbar" ><span>{{getUsername()}} <img id="userphoto" src="../assets/user.png"> </span> <span (click)="this.leaveUsername()">Sair --></span></span>
   </mat-toolbar>
 </span>
 

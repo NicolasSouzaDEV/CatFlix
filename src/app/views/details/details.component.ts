@@ -1,6 +1,7 @@
+import { cat } from '../../interface/cat';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { CatApiService } from '../cat-api.service';
+import { CatApiService } from '../../service/cat-api.service';
 
 @Component({
   selector: 'catdetails',
@@ -8,7 +9,7 @@ import { CatApiService } from '../cat-api.service';
   styleUrls: ['./details.component.sass']
 })
 export class DetailsComponent implements OnInit {
-  idCatDetails: any
+  idCatDetails: cat
 
   constructor(private api: CatApiService, private route: ActivatedRoute, private router: Router) { }
 

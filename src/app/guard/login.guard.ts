@@ -1,4 +1,4 @@
-import { CatApiService } from '../cat-api.service';
+import { CatApiService } from '../service/cat-api.service';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, Router } from '@angular/router';

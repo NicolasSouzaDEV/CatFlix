@@ -1,10 +1,10 @@
 import { LoginGuard } from './guard/login.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CatsComponent } from './cats/cats.component';
-import { DetailsComponent } from './details/details.component';
-import { FavoritesComponent } from './favorites/favorites.component';
-import { LoginComponent } from './login/login.component';
+import { CatsComponent } from './views/cats/cats.component';
+import { DetailsComponent } from './views/details/details.component';
+import { FavoritesComponent } from './views/favorites/favorites.component';
+import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "login", pathMatch: 'full'},
