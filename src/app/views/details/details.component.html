@@ -1,4 +1,4 @@
-<button mat-button id="back" routerLink="/cats"><-- Voltar</button>
+<button mat-button id="back" routerLink="/cats">< Voltar</button>
 <mat-spinner *ngIf="idCatDetails == undefined"></mat-spinner>
 <div *ngIf="idCatDetails != undefined" id="container">
   <mat-card>
@@ -30,7 +30,8 @@
     <p>{{ idCatDetails.breeds[0].life_span }} anos</p>
     <h2>Outras informações</h2>
     <p>
-      <span class="statlabel">Adaptabilidade:</span> {{ idCatDetails.breeds[0].adaptability
+      <span class="statlabel">Adaptabilidade:</span>
+      {{ idCatDetails.breeds[0].adaptability
       }}<mat-progress-bar
         mode="determinate"
         [value]="idCatDetails.breeds[0].adaptability * 20"
@@ -38,7 +39,8 @@
     </p>
 
     <p>
-      <span class="statlabel">Nivel de afeição:</span> {{ idCatDetails.breeds[0].affection_level
+      <span class="statlabel">Nivel de afeição:</span>
+      {{ idCatDetails.breeds[0].affection_level
       }}<mat-progress-bar
         mode="determinate"
         [value]="idCatDetails.breeds[0].affection_level * 20"
@@ -55,7 +57,8 @@
     </p>
 
     <p>
-      <span class="statlabel">Energia:</span> {{ idCatDetails.breeds[0].energy_level
+      <span class="statlabel">Energia:</span>
+      {{ idCatDetails.breeds[0].energy_level
       }}<mat-progress-bar
         mode="determinate"
         [value]="idCatDetails.breeds[0].energy_level * 20"
@@ -63,7 +66,8 @@
     </p>
 
     <p>
-      <span class="statlabel">Problemas de saúde:</span> {{ idCatDetails.breeds[0].health_issues
+      <span class="statlabel">Problemas de saúde:</span>
+      {{ idCatDetails.breeds[0].health_issues
       }}<mat-progress-bar
         mode="determinate"
         [value]="idCatDetails.breeds[0].health_issues * 20"
@@ -71,7 +75,8 @@
     </p>
 
     <p>
-      <span class="statlabel">Inteligência:</span> {{ idCatDetails.breeds[0].intelligence
+      <span class="statlabel">Inteligência:</span>
+      {{ idCatDetails.breeds[0].intelligence
       }}<mat-progress-bar
         mode="determinate"
         [value]="idCatDetails.breeds[0].intelligence * 20"
