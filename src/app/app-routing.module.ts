@@ -7,14 +7,23 @@ import { FavoritesComponent } from './views/favorites/favorites.component';
 import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
-  {path: "", redirectTo: "login", pathMatch: 'full'},
-  {path: "login", component: LoginComponent},
-  {path: "cats", component: CatsComponent, canActivate: [LoginGuard]},
-  {path: "favorites", component: FavoritesComponent, canActivate: [LoginGuard]},
-  {path: "details/:id", component: DetailsComponent, canActivate: [LoginGuard]}];
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'cats', component: CatsComponent, canActivate: [LoginGuard] },
+  {
+    path: 'favorites',
+    component: FavoritesComponent,
+    canActivate: [LoginGuard],
+  },
+  {
+    path: 'details/:id',
+    component: DetailsComponent,
+    canActivate: [LoginGuard],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
