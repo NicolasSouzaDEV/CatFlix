@@ -11,15 +11,17 @@ import { CatApiService } from '../../service/cat-api.service';
 export class FavoritesComponent implements OnInit {
 
   favCats: favoriteCat[];
+  isDeleting: boolean = false
 
   constructor(private api: CatApiService) {}
 
-  delFavCat(favId: number){
+  delFavCat(favId: number){ 
     this.api.delFavCats(favId).subscribe(()=> this.getFavCats())
+    this.isDeleting = true
   }
 
   getFavCats(){
-    this.api.getFavCats().subscribe(favCats => {this.favCats=favCats; console.log(favCats)})
+    this.api.getFavCats().subscribe(favCats => {this.favCats=favCats; console.log(favCats); this.isDeleting=false})
   }
 
   ngOnInit(): void {

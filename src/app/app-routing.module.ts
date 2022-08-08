@@ -1,3 +1,4 @@
+import { PgnotfoundComponent } from './views/pgnotfound/pgnotfound.component';
 import { LoginGuard } from './guard/login.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -20,6 +21,10 @@ const routes: Routes = [
     component: DetailsComponent,
     canActivate: [LoginGuard],
   },
+  {
+    path: "**",
+    component: PgnotfoundComponent
+  }
 ];
 
 @NgModule({

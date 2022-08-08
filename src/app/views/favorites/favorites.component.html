@@ -1,11 +1,13 @@
-<mat-spinner *ngIf="favCats == undefined"></mat-spinner>
-<div id="noFavsFound" *ngIf="favCats.length == 0">
+<mat-spinner *ngIf="this.favCats == undefined"></mat-spinner>
+<div id="noFavsFound" *ngIf="this.favCats ? favCats.length == 0 : false">
   <p>Nenhum gato favorito :/</p>
   <p>Clique no ícone de coração para favoritar</p>
 </div>
+<div id="deletespinner" *ngIf="this.isDeleting">
+  <mat-spinner></mat-spinner>
+</div>
 <div *ngIf="favCats != undefined" id="catbox">
   <div class="catFav" *ngFor="let cat of favCats">
-
     <div id="catwrap">
         <div
           id="image"
@@ -15,7 +17,7 @@
         </div>
         <div id="delete" (click)="delFavCat(cat.id)">
             <mat-icon>close</mat-icon>
-          </div>
+        </div>
     </div>
   </div>
 </div>

@@ -14,6 +14,7 @@ import { CatDescPipe } from './pipe/cat-desc.pipe';
 import { MaterialModule } from './material';
 import { LoginComponent } from './views/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PgnotfoundComponent } from './views/pgnotfound/pgnotfound.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FavoritesComponent,
     DetailsComponent,
     CatDescPipe,
-    LoginComponent
+    LoginComponent,
+    PgnotfoundComponent
   ],
   imports: [
     BrowserModule,

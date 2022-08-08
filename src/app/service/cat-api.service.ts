@@ -14,7 +14,7 @@ export class CatApiService {
     'content-type': 'application/json',
   });
 
-  user: string = localStorage.getItem('user');
+  user: string | null = localStorage.getItem('user');
 
   constructor(private client: HttpClient, private router: Router) {}
   getCats(): Observable<cat[]> {
@@ -38,7 +38,7 @@ export class CatApiService {
 
   getFavCats(): Observable<favoriteCat[]> {
     return this.client.get<favoriteCat[]>(
-      `https://api.thecatapi.com/v1/favourites?limit=10&sub_id=${this.user}`,
+      `https://api.thecatapi.com/v1/favourites?sub_id=${this.user}`,
       { headers: this.header }
     );
   }
@@ -58,11 +58,11 @@ export class CatApiService {
 
   leaveUsername(){
     this.user = null;
-    localStorage.setItem('user', null);
+    localStorage.removeItem('user');
     this.router.navigate(['/login'])
   }
 
   checkUserLogin(){
-    return this.user !== null
+    return this.user != null
   }
 }

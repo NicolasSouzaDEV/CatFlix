@@ -1,13 +1,15 @@
-<span>
-  <mat-toolbar>
-    <img id="logo" src="../assets/logo.png" routerLink="/cats">
-    <span *ngIf="this.checkUserLogin()" id="userbar" (click)="this.leaveUsername()"><span>{{getUsername()}} <img id="userphoto" src="../assets/user.png"> </span> Sair ></span>
-  </mat-toolbar>
-</span>
-
-<nav mat-tab-nav-bar>
-    <a mat-tab-link routerLinkActive="active" routerLink="cats">Gatos</a>
-    <a mat-tab-link routerLinkActive="active" routerLink="favorites">Favoritos</a>
-</nav>
+<div id="topbar">
+  <span>
+    <mat-toolbar>
+      <img id="logo" src="../assets/logo.png" routerLink="/cats">
+      <span *ngIf="this.checkUserLogin()" id="userbar" >{{getUsername()}} <img id="userphoto" src="../assets/user.png"> <span (click)="this.leaveUsername()" id="leaveAccount">Sair ></span> </span>
+    </mat-toolbar>
+  </span>
+  
+  <nav mat-tab-nav-bar>
+      <a mat-tab-link routerLinkActive="active" routerLink="cats">Gatos</a>
+      <a mat-tab-link routerLinkActive="active" routerLink="favorites">Favoritos</a>
+  </nav>
+</div>
 
 <router-outlet></router-outlet>
