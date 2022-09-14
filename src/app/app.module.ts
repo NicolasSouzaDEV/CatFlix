@@ -24,7 +24,7 @@ import { PgnotfoundComponent } from './views/pgnotfound/pgnotfound.component';
     DetailsComponent,
     CatDescPipe,
     LoginComponent,
-    PgnotfoundComponent
+    PgnotfoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +32,9 @@ import { PgnotfoundComponent } from './views/pgnotfound/pgnotfound.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

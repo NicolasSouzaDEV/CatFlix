@@ -1,4 +1,3 @@
-
 import { cat, favoriteCat } from '../interface/cat';
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
@@ -19,7 +18,7 @@ export class CatApiService {
   constructor(private client: HttpClient, private router: Router) {}
   getCats(): Observable<cat[]> {
     return this.client.get<cat[]>(
-      `https://api.thecatapi.com/v1/images/search?limit=20&has_breeds=1`,
+      `https://api.thecatapi.com/v1/images/search?limit=32&has_breeds=1`,
       { headers: this.header }
     );
   }
@@ -53,16 +52,16 @@ export class CatApiService {
   setUsername(username: string) {
     this.user = username;
     localStorage.setItem('user', username);
-    console.log(`usuário ${username} salvo`)
+    console.log(`usuário ${username} salvo`);
   }
 
-  leaveUsername(){
+  leaveUsername() {
     this.user = null;
     localStorage.removeItem('user');
-    this.router.navigate(['/login'])
+    this.router.navigate(['/login']);
   }
 
-  checkUserLogin(){
-    return this.user != null
+  checkUserLogin() {
+    return this.user != null;
   }
 }
